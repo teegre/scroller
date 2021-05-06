@@ -29,9 +29,9 @@
 usage() {
 cat << EOB
 Usage:
-  ${0##*/} -h
-  ${0##*/} -v
-  ${0##*/} [-l <length>] [-d <delay>] [-b <text>] [-e <text>] [-s <separator>] -t <text>
+  scroller -h
+  scroller -v
+  scroller [-l <length>] [-d <delay>] [-b <text>] [-e <text>] [-s <separator>] -t <text>
 
 Options:
   -h display help screen and exit.
