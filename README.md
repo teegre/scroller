@@ -16,6 +16,20 @@
 
 bash
 
+## Install
+
+Clone this repository:
+
+`git clone https://gitlab.com/teegre/scroller.git`
+
+Then:
+
+`make install`
+
+## Uninstall
+
+`make uninstall`
+
 ## Usage
 
 `scroller -h`  
