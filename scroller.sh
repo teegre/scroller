@@ -46,7 +46,7 @@ Options:
 EOB
 }
 
-declare __version="1.0"
+declare __version="1.0.1"
 
 exit_abnormal() {
   usage
@@ -111,8 +111,12 @@ while getopts "l:d:b:e:s:t:hv" opt; do
 done
 
 if [[ -z "$TEXT" ]]; then
-  >&2 echo "${0##*/}: no text to display!"
+  >&2 echo "scroller: no text to display!"
   exit 1
+fi
+
+if [[ -t 0 && -t 1 ]] || [[ $TERM != "linux" ]]; then
+  clear
 fi
 
 BEGIN_TEXT=${BEGIN_TEXT:-}
@@ -126,8 +130,6 @@ endstring="${SEPARATOR}${TEXT}"
 INDEX=0
 START=0
 END=0
-
-[[ -t 0 && -t 1 ]] && clear
 
 while :; do
   if ((LEN > MAXLEN)); then
@@ -155,7 +157,9 @@ while :; do
     printf "%s %-${MAXLEN}s %s\n" "$BEGIN_TEXT" "$substring" "$END_TEXT"
     exit 0
   else
-    [[ -t 0 && -t 1 ]] && printf "\033[0;0f"
+    if [[ -t 0 && -t 1 ]] || [[ $TERM != "linux" ]]; then
+      printf "\033[0;0f"
+    fi
     echo "$BEGIN_TEXT $substring $END_TEXT"
     sleep "$DELAY"
   fi
