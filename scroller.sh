@@ -22,8 +22,8 @@
 # along with this program. If not, see <https://www.gnu.org/licenses/>
 #
 # SCROLLER
-# C : N/A
-# M : 2021/05/06
+# C : 2021/05/06
+# M : 2025/06/29
 # D : Text scrolling.
 
 usage() {
@@ -39,7 +39,7 @@ Options:
   -l maximum text length (default is 45 characters).
   -d scrolling delay in seconds (default is 0.3 seconds.)
   -b fixed text at the beginning.
-  -e fixed test at the end.
+  -e fixed text at the end.
   -s separator between start and end of scrolling text (default is " -- ").
   -t text to scroll
 
