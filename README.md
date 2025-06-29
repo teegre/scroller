@@ -20,7 +20,7 @@ bash
 
 Clone this repository:
 
-`git clone https://gitlab.com/teegre/scroller.git`
+`git clone https://github.com/teegre/scroller.git`
 
 Then:
 
