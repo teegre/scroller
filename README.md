@@ -43,7 +43,7 @@ Then:
 *  -l maximum text length (default is 45 characters).
 *  -d scrolling speed in seconds (default is 0.3 seconds.)
 *  -b fixed text at the beginning.
-*  -e fixed test at the end.
+*  -e fixed text at the end.
 *  -s separator between start and end of scrolling text (default is " -- ").
 *  -t text to scroll.
 
